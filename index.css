@@ -32,11 +32,7 @@ img:not(.img-profil) {
   width: 100%;
   border-radius: var(--border-radius);
 }
-@media screen (max-width:768px){
-  img:not(.img-profil) {
-  aspect-ratio: 3/2.4;
-}
-}
+
 .bg-black {
   background-color: black;
 }
