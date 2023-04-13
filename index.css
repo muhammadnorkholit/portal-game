@@ -1,0 +1,121 @@
+:root {
+  --clr-primary: 79, 6, 245;
+  --clr-background: #131313;
+  --clr-background-2: #282828;
+  --border-radius: 10px;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins/Poppins-Light.ttf");
+  src: url("Poppins/Poppins-Bold.ttf");
+  src: url("Poppins/Poppins-Medium.ttf");
+}
+body {
+  font-family: Poppins;
+  background-color: var(--clr-background);
+  color: white;
+}
+h2 {
+  font-size: clamp(22px, 2vw, 30px);
+}
+p {
+  font-size: clamp(14px, 2vw, 16px);
+}
+a,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+img:not(.img-profil) {
+  aspect-ratio: 3/2;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+.bg-black {
+  background-color: black;
+}
+section {
+  padding-top: 2rem;
+}
+.hero-item {
+  transition: all 0.5s;
+  min-height: 50vh;
+  max-height: 50vh;
+}
+.top-0 {
+  top: 0;
+}
+.left-0 {
+  left: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.hero-item.active .content {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+.hero-item .content {
+  display: none;
+}
+.hero-item.active .content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.row {
+  row-gap: 20px;
+}
+.hero-item.active {
+  flex: 0 0 60%;
+  max-width: 66.666667%;
+}
+.hero-item img {
+  height: 100%;
+  object-fit: cover;
+}
+.input-search {
+  background-color: var(--clr-background-2);
+  border: 0;
+  outline: 0;
+  border-radius: var(--border-radius);
+  color: rgb(255, 251, 251);
+}
+.img-profil {
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.input-search:focus {
+  background-color: var(--clr-background-2);
+  box-shadow: none;
+  color: rgb(255, 251, 251);
+}
+.item-card {
+  overflow: hidden;
+}
+.item-card .content {
+  bottom: -100%;
+  transition: all 0.5s;
+}
+.item-card:hover .content {
+  background-color: rgba(var(--clr-primary), 0.5);
+  bottom: 0;
+  border-radius: var(--border-radius);
+}
+.navbar a {
+  color: white;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: rgb(var(--clr-primary));
+}
+footer {
+  margin-top: 3rem;
+}
+footer a:hover {
+  color: rgb(var(--clr-primary));
+}
